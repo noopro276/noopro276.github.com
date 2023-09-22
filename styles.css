@@ -1,0 +1,89 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://i.ibb.co/ZdFpF7s/campo2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#contenedor {
+    position: relative;
+}
+
+.texto h1 {
+    font-size: 36px;
+    color: blue;
+}
+
+.texto p {
+    font-size: 24px;
+    color: #444;
+}
+
+#regalo {
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin-top: 60px;
+    position: relative;
+}
+
+#regalo:hover {
+    transform: rotate(5deg);
+}
+
+#lluvia-flores {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 3;
+    overflow: hidden;
+}
+
+.flor {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    animation: caidaFlores 4s linear infinite;
+}
+
+.flor:nth-child(1) {
+    background-image: url('https://i.ibb.co/VW6j1Sp/margarita.png');
+}
+
+.flor:nth-child(2) {
+    background-image: url('https://i.ibb.co/qkGK9yM/girasol3.png');
+}
+
+.flor:nth-child(3) {
+    background-image: url('https://i.ibb.co/XZGB6H5/girasol2.png');
+}
+
+.flor:nth-child(4) {
+    background-image: url('https://i.ibb.co/854thcB/girasol.png');
+}
+
+.flor:nth-child(5) {
+    background-image: url('https://i.ibb.co/ZdcyVdb/flor.png');
+}
+
+@keyframes caidaFlores {
+    0% {
+        transform: translateY(-40px) rotate(0deg);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 1;
+    }
+}
